@@ -128,7 +128,6 @@ def random_img():
     folder_path = "photos"
     image_count = len([image for image in os.listdir(folder_path) if image.endswith((".png", ".jpg", ".jpeg"))])
     random_number = random.randint(1, image_count)
-
     app_elements["images"]["current_image"] = PhotoImage(file=f"{folder_path}/{random_number}.png")
     canvas.itemconfig(app_elements["images"]["current_image_screen"], image=app_elements["images"]["current_image"])
 
